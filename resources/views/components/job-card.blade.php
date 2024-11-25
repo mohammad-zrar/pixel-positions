@@ -15,7 +15,7 @@
     <div class="flex justify-between items-center mt-auto">
         <div>
             @foreach($job->tags as $tag)
-                <x-tag :$tag  />
+                <x-tag :$tag size=small  />
             @endforeach
         </div>
 
