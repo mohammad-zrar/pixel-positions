@@ -1,3 +1,5 @@
+ @props(['job'])
+
  <div class="p-4 bg-white/5 rounded-xl flex flex-col text-center">
 
      <div class="self-start text-sm">Laracasts</div>
@@ -8,9 +10,10 @@
 
      <div class="flex justify-between items-center mt-auto">
          <div>
-             <x-tag>Tag</x-tag>
-             <x-tag>Tag</x-tag>
-             <x-tag>Tag</x-tag>
+            @foreach ($job->tags as $tag)
+                <x-tag :$tag size='small' >Tag</x-tag>
+            @endforeach
+             
          </div>
 
          <img src="http://placehold.it/42x42/fff" class="rounded-xl" alt="">
